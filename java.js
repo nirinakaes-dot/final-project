@@ -24,5 +24,7 @@ constDate=document.getElementById("Date")
 constMood=document.getElementById("Mood")
 constEntry=document.getElementByI("Entry") 
 
+//new entry object
+const entry= new Entry(Title,Date,Mood,Entry);
 
  
