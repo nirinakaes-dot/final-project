@@ -30,8 +30,34 @@
             </p>
         </div>
 
-        <div>
-            
+        <div id="Entry">
+            <form action="form">
+                <div>
+                    <h2>
+                        New Entry
+                    </h2>
+                </div>
+                <label for="Title" >Title</label>
+                <input type="text" id="Title" name="Title" placeholder="Write a title for your entry"> 
+                <br>
+                <label for="Date">Date</label>
+                <input type="date" id="Date" placeholder="When is the date">
+                <br>
+                <label for="Mood">How do you feel?</label>
+                <input type="checkbox" id="Mood" value="happy" >Happy
+                <input type="checkbox" id="Mood" value="Sad " >Sad
+                <input type="checkbox" id="Mood" value="Angry " >Angry
+                <input type="checkbox" id="Mood" value="Tired ">Tired
+                <input type="checkbox" id="Mood" value="Neutral">Neutral
+
+                <br>
+
+                <label for="Entry">Entry</label>
+                <textarea id="Entry" name="Entry" placeholder="Write your thoughts here"></textarea>
+
+
+            </form>
+
         </div>
 
 
