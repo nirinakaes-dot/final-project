@@ -27,4 +27,8 @@ constEntry=document.getElementByI("Entry")
 //new entry object
 const entry= new Entry(Title,Date,Mood,Entry);
 
+//pushing the entry to the array
+new Entry.push(entry);
+
+
  
