@@ -33,6 +33,9 @@ new Entry.push(entry);
 //save on local storage
 localStorage.setItem("newEntry", JSON.stringify(newEntry));
 
+//clear form
+entry.Diary =""
+
 
 
  
