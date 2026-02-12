@@ -4,7 +4,9 @@ const entryDiary = document.getElementById("Entry");
 const addEntry = document.getElementById("AddEntry"); 
 
 //assign an event listener to the addEntry button
-addEntry.addEventListener("click",function(){});
+addEntry.addEventListener("click", addNewEntry);
+
+const newEntry =[];
 
 //create a constructor for the entries//
 function Entry(Title,Date,Mood,Entry)
@@ -15,26 +17,31 @@ function Entry(Title,Date,Mood,Entry)
     this.Entry=Entry;
 }
 
-//array to store the entries
-constnewEntry=[Title,Date,Mood,Entry];
 
 //function to add the entry to the array
-function addNewEntry(){ constTitle=document.getElementById("Title")
-constDate=document.getElementById("Date")
-constMood=document.getElementById("Mood")
-constEntry=document.getElementByI("Entry") 
+function addNewEntry(){ 
+const Title =document.getElementById("Title").value
+const Date =document.getElementById("Date").value;
+const Mood =document.getElementById("Mood").value;
+const Entry =document.getElementById("Entry").value;
 
 //new entry object
-const entry= new Entry(Title,Date,Mood,Entry);
+const entry= new Entry( Title,Date,Mood,Entry);
 
 //pushing the entry to the array
-new Entry.push(entry);
+newEntry.push(entry);
 
 //save on local storage
 localStorage.setItem("newEntry", JSON.stringify(newEntry));
 
 //clear form
-entry.Diary =""
+document.getElementById ("Title").value =""
+document.getElementById("Date").value=""
+document.getElementById("Mood").value=""
+document.getElementById("Entry").value=""
+}
+
+ 
 
 
 
