@@ -18,6 +18,11 @@ function Entry(Title,Date,Mood,Entry)
 //array to store the entries
 constnewEntry=[Title,Date,Mood,Entry];
 
-//
- 
+//function to add the entry to the array
+function addNewEntry(){ constTitle=document.getElementById("Title")
+constDate=document.getElementById("Date")
+constMood=document.getElementById("Mood")
+constEntry=document.getElementByI("Entry") 
+
+
  
