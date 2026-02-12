@@ -30,5 +30,9 @@ const entry= new Entry(Title,Date,Mood,Entry);
 //pushing the entry to the array
 new Entry.push(entry);
 
+//save on local storage
+localStorage.setItem("newEntry", JSON.stringify(newEntry));
+
+
 
  
