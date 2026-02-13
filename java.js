@@ -41,7 +41,11 @@ document.getElementById("Mood").value=""
 document.getElementById("Entry").value=""
 }
 
- //
+ //Search entry
+ function searchEntry(){
+    const searchItem = document.getElementById("search").value;
+    const entries= JSON.parse(localStorage.getItem("newEntry")) 
+ }
 
 
 
