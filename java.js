@@ -45,6 +45,9 @@ document.getElementById("Entry").value=""
  function searchEntry(){
     const searchItem = document.getElementById("search").value;
     const entries= JSON.parse(localStorage.getItem("newEntry")) 
+    //filter entry using mood
+    const filteredEntries = entries.filteredEntries((entry)) => entry.Mood.tolowerCase().includes(searchItem.)
+    tolowerCase(());
  }
 
 
