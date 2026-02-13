@@ -46,15 +46,23 @@ document.getElementById("Entry").value=""
     const searchItem = document.getElementById("search").value;
     const entries= JSON.parse(localStorage.getItem("newEntry")) 
     //filter entry using mood
-    const filteredEntries = entries.filteredEntries((entry)) => entry.Mood.tolowerCase().includes(searchItem.)
-    tolowerCase(());
+    const filterEntries = entries.filter(...)((entry)) => entry.Mood.toLowerCase().includes(searchItem.)
+    toLowerCase(());
 
  }
 
 //display entry
 function displayEntry(){
-    const entries= JSON.parse
-}
+    const container=document.getElementById("Entriescont")
+    const entries= JSON.parse(localStorage.getItem("newEntry"));
+    entries.forEach((entry) =>{
+        const entryDiv= document.createElement("div");
+        entryDiv.innerHTML= getEntryHTMl(entry);
+        container.appendChild(entryDiv);
+
+    })};
+
  //function delete entry
- if(confirm(Are you sure you want to delete this entry?) )
+ if(confirm("Are you sure you want to delete this entry?"))
+   {let entries= JSON.parse(localStorage.getItem("newEntry"));} 
   
