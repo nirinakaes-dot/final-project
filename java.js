@@ -9,7 +9,7 @@ addEntry.addEventListener("click", addNewEntry);
 const newEntry =[];
 
 //create a constructor for the entries//
-function Entry(Title,Date,Mood,Entry)
+function Journal(Title,Date,Mood,Entry)
 
 {   this.Title=Title;
     this.Date=Date;
@@ -26,7 +26,7 @@ const Mood =document.getElementById("Mood").value;
 const Entry =document.getElementById("Entry").value;
 
 //new entry object
-const entry= new Entry( Title,Date,Mood,Entry);
+const entry= new Journal( Title,Date,Mood,Entry);
 
 //pushing the entry to the array
 newEntry.push(entry);
