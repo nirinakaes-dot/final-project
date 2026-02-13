@@ -1,4 +1,4 @@
-
+ 
 // adding variables to access the textarea and button elements in the HTML document
 const entryDiary = document.getElementById("Entry");
 const addEntry = document.getElementById("AddEntry"); 
@@ -48,8 +48,12 @@ document.getElementById("Entry").value=""
     //filter entry using mood
     const filteredEntries = entries.filteredEntries((entry)) => entry.Mood.tolowerCase().includes(searchItem.)
     tolowerCase(());
+
  }
 
-
-
+//display entry
+function displayEntry(){
+    
+}
+ 
  
