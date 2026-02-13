@@ -41,7 +41,7 @@ document.getElementById("Mood").value=""
 document.getElementById("Entry").value=""
 }
 
- 
+ //
 
 
 
