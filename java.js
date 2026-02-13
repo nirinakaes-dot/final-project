@@ -53,7 +53,8 @@ document.getElementById("Entry").value=""
 
 //display entry
 function displayEntry(){
-    
+    const entries= JSON.parse
 }
- 
- 
+ //function delete entry
+ if(confirm(Are you sure you want to delete this entry?) )
+  
