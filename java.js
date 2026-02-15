@@ -22,7 +22,7 @@ function Journal(Title,Date,Mood,Entry)
 function addNewEntry(){ 
 const Title =document.getElementById("Title").value
 const Date =document.getElementById("Date").value;
-const Mood =document.getElementById("Mood").value;
+const Mood =document.getElementsByName("Mood").value;
 const Entry =document.getElementById("Entry").value;
 
 //new entry object
@@ -68,4 +68,25 @@ function displayEntry(){
  displayEntry();
 
  //add event listener to the search button
- document.getElementById(Searchbitton).addEventlistener("click", seachEntry);
+ document.getElementById("Searchbutton").addEventListener("click", searchEntry);
+
+ //Validation
+ if(Title===""|| Date===""|| Mood===""|| Entry==="")
+ {alert("Please fill in all the fields");}
+
+//get entry HTML
+function getEntryHTML(entry){
+    return `h2>${entry.Title}</h2>
+    <p>Date: ${entry.Date}</p>
+    <p>Mood: ${entry.Mood}</p>
+    <p>${entry.Entry}</p>
+    <button onclick="deleteEntry(${entry.Title})">Delete</button>`;
+}
+ //update count
+ function entryCount(){
+    const count=document.getElementById("entryCount")
+    if(count){
+        const entries= JSON.parse(localStorage.getItem("newEntry"));
+        count.textContent=`Total Entries: ${entries.length}`;
+    } }
+    entryCount();
