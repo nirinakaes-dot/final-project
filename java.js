@@ -65,3 +65,7 @@ function displayEntry(){
  if(confirm("Are you sure you want to delete this entry?"))
    {let entries= JSON.parse(localStorage.getItem("newEntry"));} 
   
+ displayEntry();
+
+ //add event listener to the search button
+ document.getElementById(Searchbitton).addEventlistener("click", seachEntry);
