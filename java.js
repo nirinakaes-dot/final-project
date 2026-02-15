@@ -6,7 +6,7 @@ const addEntry = document.getElementById("AddEntry");
 //assign an event listener to the addEntry button
 addEntry.addEventListener("click", addNewEntry);
 
-const newEntry =[];
+const newEntry =JSON.parse(localStorage.getItem("newEntry")) || [];
 
 //create a constructor for the entries//
 function Journal(Title,Date,Mood,Entry)
@@ -43,11 +43,10 @@ document.getElementById("Entry").value=""
 
  //Search entry
  function searchEntry(){
-    const searchItem = document.getElementById("search").value;
+    const searchItem = document.getElementById("Search").value;
     const entries= JSON.parse(localStorage.getItem("newEntry")) 
     //filter entry using mood
-    const filterEntries = entries.filter(...)((entry)) => entry.Mood.toLowerCase().includes(searchItem.)
-    toLowerCase(());
+    const filterEntries = entries.filter(entry => entry.Mood.toLowerCase().includes(searchItem))
 
  }
 
@@ -57,7 +56,7 @@ function displayEntry(){
     const entries= JSON.parse(localStorage.getItem("newEntry"));
     entries.forEach((entry) =>{
         const entryDiv= document.createElement("div");
-        entryDiv.innerHTML= getEntryHTMl(entry);
+        entryDiv.innerHTML= getEntryHTML(entry);
         container.appendChild(entryDiv);
 
     })};
