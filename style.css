@@ -1,3 +1,10 @@
-body{
-
+body {
+    background-image: url("images/");
 }
+#Summary{
+background-color: #40534C;
+}
+#box {
+    background-color: #1A3636;
+}
+
