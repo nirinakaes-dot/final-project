@@ -41,3 +41,4 @@ Bold editorial design:
 This project is licensed by MIT
 
 ## Live link to the site
+https://nirinakaes-dot.github.io/Between-lines--journal-app/
