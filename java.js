@@ -125,12 +125,14 @@ function displayEntry(){
 
  //get entry HTML
 function getEntryHTML(entry, index){
-<button onclick= "toggleFavorite(${index})">Favorite</button>;
+    const isFav =entry.favorite=== true
     return `<h2>${entry.Title}</h2>
     <p>Date: ${entry.Date}</p>
     <p>Mood: ${entry.Mood}</p>
     <p>${entry.Entry}</p>
-    <button onclick="deleteEntry(${index})">Delete</button>`;
+   <button onclick="toggleFavorite(${index})">${isFav ? '★ Unfavorite' : '☆ Favorite'}</button><button onclick= "toggleFavorite(${index})">Favorite</button>;
+    <button onclick="deleteEntry(${index})">Delete</button>`
+
 
 }
 //favorite
@@ -141,14 +143,14 @@ function toggleFavorite(index){
     displayEntry();
 }
 function displayFavorites(){
-    const container = document.getElementById("favconts")
+    const container = document.getElementById("favcont")
     if(!container) return;
     const entries =JSON.parse(localStorage.getItem("newEntry")) || []
-    const favorites = entries.filter(enter=> entry.favorite=== true):
+    const favorites = entries.filter(enter=> entry.favorite=== true);
     container.innerHTML="";
 
     if(favorites.length=0){
-        container.innerHTML=<p>No favorite entries listed</p>
+        container.innerHTML="<p>No favorite entries listed</p>";
         return;
     }
     favorites.forEach((entry, index) => {
@@ -163,7 +165,7 @@ function displayFavorites(){
     });
 }
 
-if(document.getElementById("favCont")){ displayFavorites(); }
+if(document.getElementById("favcont")){ displayFavorites(); }
 
 
 
