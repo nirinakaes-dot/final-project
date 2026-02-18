@@ -125,12 +125,47 @@ function displayEntry(){
 
  //get entry HTML
 function getEntryHTML(entry, index){
-
+<button onclick= "toggleFavorite(${index})">Favorite</button>;
     return `<h2>${entry.Title}</h2>
     <p>Date: ${entry.Date}</p>
     <p>Mood: ${entry.Mood}</p>
     <p>${entry.Entry}</p>
-    <button onclick="deleteEntry(${index})">Delete</button>`;}
+    <button onclick="deleteEntry(${index})">Delete</button>`;
+
+}
+//favorite
+function toggleFavorite(index){
+    let entries= JSON.parse(localStorage.getItem("newEntry")) || []
+    entries[index].favorite = !entries[index].favorite;
+    localStorage.setItem("newEntry", JSON.stringify(entries));
+    displayEntry();
+}
+function displayFavorites(){
+    const container = document.getElementById("favconts")
+    if(!container) return;
+    const entries =JSON.parse(localStorage.getItem("newEntry")) || []
+    const favorites = entries.filter(enter=> entry.favorite=== true):
+    container.innerHTML="";
+
+    if(favorites.length=0){
+        container.innerHTML=<p>No favorite entries listed</p>
+        return;
+    }
+    favorites.forEach((entry, index) => {
+        const actualIndex = entries.findIndex(e =>
+            e.Title === entry.Title &&
+            e.Date === entry.Date &&
+            e.Entry === entry.Entry
+        );
+        const div = document.createElement("div");
+        div.innerHTML = getEntryHTML(entry, actualIndex);
+        container.appendChild(div);
+    });
+}
+
+if(document.getElementById("favCont")){ displayFavorites(); }
+
+
 
    
  //update count
