@@ -130,7 +130,7 @@ function getEntryHTML(entry, index){
     <p>Date: ${entry.Date}</p>
     <p>Mood: ${entry.Mood}</p>
     <p>${entry.Entry}</p>
-   <button onclick="toggleFavorite(${index})">${isFav ? '★ Unfavorite' : '☆ Favorite'}</button><button onclick= "toggleFavorite(${index})">Favorite</button>;
+   <button onclick="toggleFavorite(${index})">${isFav ? '★ Unfavorite' : '☆ Favorite'}</button>
     <button onclick="deleteEntry(${index})">Delete</button>`
 
 
@@ -142,14 +142,15 @@ function toggleFavorite(index){
     localStorage.setItem("newEntry", JSON.stringify(entries));
     displayEntry();
 }
+//function to display favorites
 function displayFavorites(){
     const container = document.getElementById("favcont")
     if(!container) return;
     const entries =JSON.parse(localStorage.getItem("newEntry")) || []
-    const favorites = entries.filter(enter=> entry.favorite=== true);
+    const favorites = entries.filter(entry=> entry.favorite=== true);
     container.innerHTML="";
 
-    if(favorites.length=0){
+    if(favorites.length===0){
         container.innerHTML="<p>No favorite entries listed</p>";
         return;
     }
