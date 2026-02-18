@@ -1,10 +1,88 @@
-body {
-    background-image: url("images/");
-}
-#Summary{
-background-color: #40534C;
-}
-#box {
-    background-color: #1A3636;
+#viewEntries{
+    display: inline-block;
+    margin-top: 24px;
+    font-size: 24px;
+
 }
 
+#addEntry{
+    display: block;
+    padding: 14px;
+    font-size: large;
+
+}
+input[type="checkboxes"]{
+    margin: 5px;
+    width,height: 15px;
+}
+label{
+    display: block;
+    padding: 5px;
+}
+
+#Summary{
+    border-color: black;
+    border bottom: 4px;
+    padding: 24px;
+    margin-bottom: 40px;
+    
+}
+
+#entryform h2{
+    display: flex;
+    align-items: center;
+}
+
+#Introduction{
+    border top:;
+    padding: 15px;
+    line-height: normal;
+
+}
+#btwn{
+    padding: 5px;
+    display: flex;
+}
+
+a{
+    padding: 5px;
+    border: 23px;
+    border-color: black;
+
+}
+ input{
+    padding: 14px;
+    border-color: black;
+}
+
+input [checkbox]{
+    padding: 12px;
+    border-color: black;
+
+
+}
+textarea{
+    padding: 14px;
+    border-color: black;
+}
+label {
+    padding: 0cap;
+    font-size: larger;
+    align-self: center;
+}
+
+#box{
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+
+}
+#Introduction{
+    border:#222222 ;
+    margin bottom:24px ;
+    
+    
+}
+body{
+    background-color: beige;
+}

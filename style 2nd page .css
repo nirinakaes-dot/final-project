@@ -1,0 +1,17 @@
+body{
+    background-color: beige;
+}
+h1{
+    justify-content: center;
+    align-items: center;
+}
+input{
+    padding: 14px;
+    border: 40px;
+}
+h1{
+    padding: 14px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
